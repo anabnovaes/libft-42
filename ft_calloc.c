@@ -6,12 +6,12 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 20:24:15 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 14:30:43 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/06 19:25:05 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <string.h>
 
-void *ft_calloc(size_t nmemb, size_t size)
+void *ft_calloc(size_t count, size_t size)
 {
 }

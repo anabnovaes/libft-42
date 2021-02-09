@@ -6,7 +6,10 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:21 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/02 19:22:21 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/06 19:48:22 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int ft_strncmp(const char *s1, const char *s2)
+{
+}

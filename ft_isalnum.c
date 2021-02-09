@@ -6,11 +6,10 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:19:49 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 14:38:04 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/08 19:23:57 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
 
 int ft_isalnum(int c)
 {

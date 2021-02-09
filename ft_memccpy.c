@@ -6,12 +6,12 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:20:49 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 11:38:41 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/08 20:07:13 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <string.h>
 
-void *ft_memccpy(void *dest, const void *src, int c, size_t n)
+void *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
 {
 }

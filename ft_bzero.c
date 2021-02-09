@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:18:58 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 14:30:40 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/08 19:35:53 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,13 @@
 
 void ft_bzero(void *s, size_t n)
 {
+    int counter;
+
+    counter = 0;
+    while(counter < n)
+    {
+        *s[n] = '/0';
+        counter++;
+    }
+
 }

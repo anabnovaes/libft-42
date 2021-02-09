@@ -6,11 +6,11 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:20:57 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 14:17:45 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/06 19:32:33 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <string.h>
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
