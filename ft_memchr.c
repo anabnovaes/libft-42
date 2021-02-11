@@ -6,12 +6,12 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:20:53 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 19:13:30 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:07:54 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 }

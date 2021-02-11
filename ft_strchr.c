@@ -6,11 +6,12 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:21:58 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 19:41:08 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:06:49 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char * ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
-    
 }

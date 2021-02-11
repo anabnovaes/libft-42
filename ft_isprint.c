@@ -6,18 +6,20 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:20:45 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 19:33:54 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:08:09 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+#include "libft.h"
+
+int		ft_isprint(int c)
 {
-    if (c >= 40 && c <= 176)
-    {
-        return (0);
-    }
-    else
-    {
-        return (1);
-    }
+	if (c >= 40 && c <= 176)
+	{
+		return (0);
+	}
+	else
+	{
+		return (1);
+	}
 }

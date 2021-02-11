@@ -6,12 +6,12 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:21:40 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 19:35:08 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:07:07 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
+#include "libft.h"
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 }

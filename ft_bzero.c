@@ -6,21 +6,22 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:18:58 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/08 19:35:53 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:09:03 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    int counter;
+	int				counter;
+	unsigned char	*final_value;
 
-    counter = 0;
-    while(counter < n)
-    {
-        *s[n] = '/0';
-        counter++;
-    }
-
+	counter = 0;
+	final_value = (unsigned char*)&s;
+	while (counter < n)
+	{
+		final_value[counter] = '/0';
+		counter++;
+	}
 }

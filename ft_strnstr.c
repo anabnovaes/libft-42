@@ -6,12 +6,12 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:24 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 19:50:05 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:06:11 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char * ft_strnstr(const char *haystack,const char * needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 }

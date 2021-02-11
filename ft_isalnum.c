@@ -6,19 +6,20 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:19:49 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/08 19:23:57 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:08:48 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-     if(c >= '0' && c <='9')
-    {
-        return (1);
-    }
-    else
-    {
-        return (0);
-    }
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

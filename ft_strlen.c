@@ -6,13 +6,13 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:17 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 19:47:47 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:06:25 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-size_t		ft_strlen(char *s)
+size_t	ft_strlen(char *s)
 {
 	int size;
 

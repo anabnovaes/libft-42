@@ -6,10 +6,12 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:05 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/06 19:42:26 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:06:45 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strdup(const char *s1)
+#include "libft.h"
+
+char	*ft_strdup(const char *s1)
 {
 }
