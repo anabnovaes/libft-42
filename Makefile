@@ -6,7 +6,7 @@
 #    By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/15 18:10:22 by apaula-b          #+#    #+#              #
-#    Updated: 2021/02/15 20:13:06 by apaula-b         ###   ########.fr        #
+#    Updated: 2021/02/15 20:45:20 by apaula-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ FILES =  ft_isalnum.c \
 		ft_strchr.c \
 		ft_strlcat.c \
 		ft_atoi.c 
-
+		
 OBJ = $(FILES:.c=.o)
 
 #1st rule to execute
