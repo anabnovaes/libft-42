@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:27 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/15 08:45:20 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/15 20:28:54 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	
 	character = (char *)s;
 	length = ft_strlen((char *)character);
-	while(length != 0)
+	while (length != 0)
 	{
 		if (character[length] == (char *)c)
 		{
@@ -28,5 +28,4 @@ char	*ft_strrchr(const char *s, int c)
 		length--;
 	}
 	return(NULL);
-	
 }
