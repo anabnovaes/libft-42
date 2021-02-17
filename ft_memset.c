@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:18:52 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/15 20:27:55 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/17 19:09:40 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t			counter;
 	unsigned char	*value;
 
-	value = b;
-	counter = 0;
-	while (value[counter] != '\0' && counter < len)
+	value = (char *)b;
+	while ()
 	{
-		value[counter] = (unsigned char)c;
-		counter++;
 	}
-	return (b);
+
 }

@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:21:58 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/14 20:30:21 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/17 19:12:50 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,20 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char value_check;
-	value_check = (char)c;
-	while (*s)
+	size_t counter;
+	
+	counter = 0; 
+	while (s[counter] != '\0')
 	{
-		if (*s == value_check)
+		if (s[counter] == c)
 		{
-			return ((char *)s);
+			return ((char *)s + counter);
 		}
-		s++;
+		counter++;
 	}
-	if(*s == value_check)
+	if (s[counter] == c)
 	{
-		return ((char *)s);
+		return ((char *)s + counter);
 	}
 	return (NULL);
 }

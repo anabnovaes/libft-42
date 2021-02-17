@@ -6,7 +6,7 @@
 #    By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/15 18:10:22 by apaula-b          #+#    #+#              #
-#    Updated: 2021/02/15 20:45:20 by apaula-b         ###   ########.fr        #
+#    Updated: 2021/02/17 19:20:49 by apaula-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,11 +29,12 @@ FILES =  ft_isalnum.c \
 		ft_tolower.c \
 		ft_toupper.c \
 		ft_strlen.c  \
-		ft_memset.c \
 		ft_strlcat.c \
 		ft_strchr.c \
 		ft_strlcat.c \
-		ft_atoi.c 
+		ft_atoi.c \
+		ft_strchr.c \
+		ft_strrchr.c
 		
 OBJ = $(FILES:.c=.o)
 
