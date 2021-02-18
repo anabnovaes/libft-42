@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/11 18:57:44 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/14 14:20:43 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/18 18:49:32 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*ft_strlcpy(char *dst, const char *src, size_t len);
 
 size_t	ft_strlen(char *s);
 
-int	ft_strncmp(const char *s1, const char *s2);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 

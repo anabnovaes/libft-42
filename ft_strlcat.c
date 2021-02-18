@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:09 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/15 20:28:11 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/17 20:13:56 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		counter++;
 	}
 	dst[size_dest + counter] = '\0';
-	return (size_dest + 20);
+	return (size_dest + ft_strlen((char *)src));
 }

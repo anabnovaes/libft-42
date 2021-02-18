@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:27 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/17 19:40:02 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/18 18:39:11 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)s + length);
 		}
 		length--;
+	}
+	if (s[length] == c)
+	{
+		return ((char *)s + length);
 	}
 	return(NULL);
 }
