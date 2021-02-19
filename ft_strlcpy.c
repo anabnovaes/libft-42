@@ -6,26 +6,26 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:13 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/14 13:53:25 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/18 20:47:03 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strlcpy(char *dst, const char *src, size_t len)
+size_t	ft_strlcpy(char *dst, const char *src, size_t len)
 {
-	unsigned int size;
+	size_t counter;
 
-	size = 0;
-	while (size < len && src[size] != '\0')
+	counter = 0;
+	if (len == 0)
 	{
-		dst[size] = src[size];
-		size++;
+		return (ft_strlen((char *)src));
 	}
-	while (size < len)
+	while (counter < len - 1 && src[counter])
 	{
-		dst[size] = '\0';
-		size++;
+		dst[counter] = src[counter];
+		counter++;
 	}
-	return (dst);
+	dst[counter] = '\0';
+	return (ft_strlen((char *)src));
 }

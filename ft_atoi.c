@@ -6,20 +6,36 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 09:41:55 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/15 20:29:02 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/18 21:04:46 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	check_spaces(char character);
-static int	check_signal(char value);
+static int	check_signal(char value)
+{
+	if (value == '-')
+		return (-1);
+	else if (value == '+')
+		return (1);
+	else
+		return (0);
+}
+
+static int	check_spaces(char character)
+{
+	if (character == ' ' || character == '\v' || character == '\n' ||
+	character == '\t' || character == '\r' || character == '\f')
+		return (1);
+	else
+		return (0);
+}
 
 int			ft_atoi(const char *str)
 {
-	int counter;
-	size_t sum;
-	int signal;
+	int		counter;
+	size_t	sum;
+	int		signal;
 
 	counter = 0;
 	sum = 0;
@@ -39,23 +55,4 @@ int			ft_atoi(const char *str)
 		counter++;
 	}
 	return (sum * signal);
-}
-
-static int	check_signal(char value)
-{
-	if (value == '-')
-		return (-1);
-	else if (value == '+')
-		return (1);
-	else
-		return (0);
-}
-
-static int	check_spaces(char character)
-{
-	if (character == ' ' || character == '\v' || character == '\n' ||
-	character == '\t' || character == '\r' || character == '\f')
-		return (1);
-	else
-		return (0);
 }

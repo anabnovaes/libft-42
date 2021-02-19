@@ -6,7 +6,7 @@
 #    By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/15 18:10:22 by apaula-b          #+#    #+#              #
-#    Updated: 2021/02/18 18:55:04 by apaula-b         ###   ########.fr        #
+#    Updated: 2021/02/18 20:40:54 by apaula-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,11 +31,13 @@ FILES =  ft_isalnum.c \
 		ft_strlen.c  \
 		ft_strlcat.c \
 		ft_strchr.c \
-		ft_strlcat.c \
 		ft_atoi.c \
-		ft_strchr.c \
 		ft_strrchr.c \
-		ft_strncmp.c 
+		ft_strncmp.c \
+		ft_strlcpy.c \
+		ft_bzero.c \
+		ft_memset.c \
+		ft_calloc.c
 		
 OBJ = $(FILES:.c=.o)
 
@@ -59,3 +61,5 @@ fclean: clean
 
 #clean files and execute library
 re: fclean all 
+
+.PHONY:        all clean fclean
