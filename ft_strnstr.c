@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:24 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/18 20:51:36 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/18 22:28:56 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			cnt2++;
 		}
+		cnt1++;
 	}
 	return (NULL);
 }

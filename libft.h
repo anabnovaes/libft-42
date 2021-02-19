@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/11 18:57:44 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/18 21:06:08 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/19 18:49:44 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,13 @@ int		ft_isdigit(int c);
 
 int		ft_isprint(int c);
 
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		*ft_memcmp(const void *s1, const void *s2, size_t n);
 
 void	*ft_memmove(void *dst, const void *src, size_t len);
 

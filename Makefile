@@ -6,7 +6,7 @@
 #    By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/15 18:10:22 by apaula-b          #+#    #+#              #
-#    Updated: 2021/02/18 20:40:54 by apaula-b         ###   ########.fr        #
+#    Updated: 2021/02/19 19:08:17 by apaula-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,10 @@ FILES =  ft_isalnum.c \
 		ft_strlcpy.c \
 		ft_bzero.c \
 		ft_memset.c \
-		ft_calloc.c
+		ft_calloc.c \
+		ft_strnstr.c \
+		ft_memcpy.c \
+		ft_memccpy.c
 		
 OBJ = $(FILES:.c=.o)
 
