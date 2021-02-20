@@ -6,7 +6,7 @@
 #    By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/15 18:10:22 by apaula-b          #+#    #+#              #
-#    Updated: 2021/02/19 22:49:16 by apaula-b         ###   ########.fr        #
+#    Updated: 2021/02/19 23:02:41 by apaula-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,3 @@ fclean: clean
 re: fclean all 
 
 .PHONY:        all clean fclean
-
-so:
-	$(CC) -fPIC $(FLAGS) $(FILES)
-	gcc -shared -o libft.so $(OBJ)	
