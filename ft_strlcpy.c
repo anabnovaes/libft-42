@@ -21,6 +21,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t len)
 	{
 		return (ft_strlen((char *)src));
 	}
+	if (dst == NULL || src == NULL)
+	{
+		return (0);
+	}
 	while (counter < len - 1 && src[counter])
 	{
 		dst[counter] = src[counter];

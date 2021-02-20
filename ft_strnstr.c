@@ -1,3 +1,4 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -14,26 +15,27 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t cnt1;
-	size_t cnt2;
+	size_t c1;
+	size_t c2;
 
-	cnt1 = 0;
+	c1 = 0;
 	if (!needle || !ft_isprint((int)*needle))
 	{
 		return ((char *)haystack);
 	}
-	while (cnt1 < len && haystack[cnt1] != '\0')
+	while (c1 < len && haystack[c1] != '\0')
 	{
-		cnt2 = 0;
-		while (haystack[cnt1 + cnt2] == needle[cnt2] && cnt1 + cnt2 < len)
+		c2 = 0;
+		while ((haystack[c1 + c2] == needle[c2] && c1 + c2 < len) && 
+		needle[c2])
 		{
-			cnt2++;
+			c2++;
 		}
-		if (needle[cnt2] == '\0')
+		if (needle[c2] == '\0')
 		{
-			return ((char *)haystack + cnt1);
+			return ((char *)haystack + c1);
 		}
-		cnt1++;
+		c1++;
 	}
 	return (NULL);
 }

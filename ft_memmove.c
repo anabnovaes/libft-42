@@ -14,14 +14,4 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *temp;
-
-	temp = malloc(sizeof(char)* len);
-	if (!temp)
-	{
-		return (NULL);
-	}
-	else
-	{
-	}
 }

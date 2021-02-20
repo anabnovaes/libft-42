@@ -33,9 +33,9 @@ static int	check_spaces(char character)
 
 int			ft_atoi(const char *str)
 {
-	int		counter;
+	size_t		counter;
 	size_t	sum;
-	int		signal;
+	size_t		signal;
 
 	counter = 0;
 	sum = 0;

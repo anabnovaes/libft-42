@@ -41,7 +41,8 @@ FILES =  ft_isalnum.c \
 		ft_strnstr.c \
 		ft_memcpy.c \
 		ft_memccpy.c \
-		ft_strdup.c 
+		ft_strdup.c \
+		ft_memmove.c
 		
 OBJ = $(FILES:.c=.o)
 
