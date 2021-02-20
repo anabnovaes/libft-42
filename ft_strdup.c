@@ -18,13 +18,13 @@ char	*ft_strdup(const char *s1)
 	char	*s2;
 
 	size_s1 = ft_strlen((char *)s1);
-	if (size_s1 == 0 || !(s2 = malloc(size_s1 * sizeof(char *))))
+	if (size_s1 == 0 || !(s2 = malloc(size_s1 * sizeof(char *) + 1)))
 	{
 		return (NULL);
 	}
 	else
 	{
-		s2 = malloc(size_s1 * sizeof(char *));
+		s2 = malloc(size_s1 + 1);
 		ft_memcpy(s2, s1, size_s1 + 1);
 		return (s2);
 	}

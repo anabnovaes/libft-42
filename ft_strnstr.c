@@ -18,13 +18,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t cnt2;
 
 	cnt1 = 0;
-	if (len == 0)
+	if (!needle || !ft_isprint((int)*needle))
 	{
 		return ((char *)haystack);
-	}
-	if (!needle)
-	{
-		return (NULL);
 	}
 	while (cnt1 < len && haystack[cnt1] != '\0')
 	{
