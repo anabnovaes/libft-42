@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	cnrv_dst = (char *)dst;
 	cnrv_src = (char *)src;
 	counter = 0;
-	if(!cnrv_src &&  !cnrv_dst)
+	if (!cnrv_src && !cnrv_dst)
 	{
 		return (NULL);
 	}
