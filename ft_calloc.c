@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 20:24:15 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/19 22:38:30 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/20 20:25:56 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,16 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*p;
+	void *pointer;
 
-	p = malloc(count * size);
-	if (count == 0 && size == 0)
+	if (count == 0 || size == 0 || !(pointer = malloc(count * sizeof(size))))
 	{
-		free(p);
-	}
-	else if (!(p = malloc(count * size)))
-	{
-		return(NULL);
+		return (NULL);
 	}
 	else
 	{
-		ft_bzero(p, size * count);
+		pointer = malloc(count * sizeof(size));
+		ft_bzero(pointer, size * count);
+		return (pointer);
 	}
-	return (NULL);
 }
