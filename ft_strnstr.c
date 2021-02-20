@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:24 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/18 22:28:56 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/19 22:35:06 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		while (haystack[cnt1 + cnt2] == needle[cnt2] && cnt1 + cnt2 < len)
 		{
 			cnt2++;
+		}
+		if (needle[cnt2] == '\0')
+		{
+			return ((char *)haystack + cnt1);
 		}
 		cnt1++;
 	}

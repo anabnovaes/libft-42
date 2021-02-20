@@ -6,7 +6,7 @@
 #    By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/15 18:10:22 by apaula-b          #+#    #+#              #
-#    Updated: 2021/02/19 19:08:17 by apaula-b         ###   ########.fr        #
+#    Updated: 2021/02/19 22:49:16 by apaula-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,8 @@ FILES =  ft_isalnum.c \
 		ft_calloc.c \
 		ft_strnstr.c \
 		ft_memcpy.c \
-		ft_memccpy.c
+		ft_memccpy.c \
+		ft_strdup.c 
 		
 OBJ = $(FILES:.c=.o)
 
@@ -66,3 +67,7 @@ fclean: clean
 re: fclean all 
 
 .PHONY:        all clean fclean
+
+so:
+	$(CC) -fPIC $(FLAGS) $(FILES)
+	gcc -shared -o libft.so $(OBJ)	
