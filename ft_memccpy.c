@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:20:49 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 10:54:58 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/21 11:12:03 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	char	*cnrv_dst;
 	char	*cnrv_src;
 
-	cnrv_dst = (unsigned char *)dst;
-	cnrv_src = (unsigned char *)src;
+	cnrv_dst = (char *)dst;
+	cnrv_src = (char *)src;
 	cnt = 0;
 	while (cnt < n)
 	{
