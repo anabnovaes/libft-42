@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 17:45:57 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 18:04:07 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/21 18:07:59 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putendl_fd(char *s, int fd)
 	size_t count;
 
 	count = 0;
-	if(s == NULL)
+	if (s == NULL)
 	{
 		return ;
 	}
@@ -26,5 +26,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[count], 1);
 		count++;
 	}
-	write(fd,"\n", 1);
+	write(fd, "\n", 1);
 }
