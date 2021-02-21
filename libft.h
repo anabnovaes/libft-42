@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/11 18:57:44 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 17:10:32 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/21 17:43:05 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <stddef.h>
+# include <unistd.h>
 
 int			ft_atoi(const char *str);
 
@@ -44,6 +45,10 @@ size_t		ft_strlen(char *s);
 
 void		ft_bzero(void *s, size_t n);
 
+void		ft_putchar_fd(char c, int fd);
+
+void		ft_putstr_fd(char *s, int fd);
+
 void		*ft_calloc(size_t count, size_t size);
 
 void		*ft_memcpy(void *dst, const void *src, size_t n);
@@ -67,5 +72,7 @@ char		*ft_strrchr(const char *s, int c);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 
 char		*ft_strjoin(char const *s1, char const *s2);
+
+char		*ft_strtrim(char const *s1, char const *set);
 
 #endif
