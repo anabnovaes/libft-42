@@ -6,7 +6,7 @@
 #    By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/15 18:10:22 by apaula-b          #+#    #+#              #
-#    Updated: 2021/02/21 12:45:28 by apaula-b         ###   ########.fr        #
+#    Updated: 2021/02/21 17:07:02 by apaula-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,8 @@ FILES =  ft_isalnum.c \
 		ft_memcmp.c  \
 		ft_memchr.c \
 		ft_memmove.c \
-		ft_substr.c
+		ft_substr.c \
+		ft_strjoin.c 
 		
 OBJ = $(FILES:.c=.o)
 

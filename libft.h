@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/11 18:57:44 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 12:31:32 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/21 17:10:32 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,7 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strrchr(const char *s, int c);
 
 char		*ft_substr(char const *s, unsigned int start, size_t len);
+
+char		*ft_strjoin(char const *s1, char const *s2);
 
 #endif
