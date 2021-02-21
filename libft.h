@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/11 18:57:44 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 17:43:05 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/21 17:50:03 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ void		ft_bzero(void *s, size_t n);
 void		ft_putchar_fd(char c, int fd);
 
 void		ft_putstr_fd(char *s, int fd);
+
+void		ft_putendl_fd(char *s, int fd);
 
 void		*ft_calloc(size_t count, size_t size);
 
