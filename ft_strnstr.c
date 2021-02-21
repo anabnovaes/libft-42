@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -7,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:24 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/20 11:19:37 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/21 10:58:18 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +25,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (c1 < len && haystack[c1] != '\0')
 	{
 		c2 = 0;
-		while ((haystack[c1 + c2] == needle[c2] && c1 + c2 < len) && 
+		while ((haystack[c1 + c2] == needle[c2] && c1 + c2 < len) &&
 		needle[c2])
 		{
 			c2++;
