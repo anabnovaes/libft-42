@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 12:27:06 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 14:57:48 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/21 15:00:01 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (len == 0 || !dest || (size_t)start >= len)
 		return (dest);
-	while (start + counter < (unsigned int)len)
+	while (counter < (unsigned int)len)
 	{
 		dest[counter] = org[counter + start];
 		counter++;
