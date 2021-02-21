@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:20:53 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 11:31:00 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/21 11:33:29 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t			counter;
 
 	search = (unsigned char *)s;
+	counter = 0;
 	while (counter < n)
 	{
 		if (search[counter] == (unsigned char)c)
