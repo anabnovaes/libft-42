@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t c2;
 
 	c1 = 0;
-	if (!needle || !ft_isprint((int)*needle))
+	if (*needle == '\0')
 	{
 		return ((char *)haystack);
 	}
