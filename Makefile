@@ -6,7 +6,7 @@
 #    By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/15 18:10:22 by apaula-b          #+#    #+#              #
-#    Updated: 2021/02/21 17:50:21 by apaula-b         ###   ########.fr        #
+#    Updated: 2021/02/22 19:21:02 by apaula-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,10 @@ FILES =  ft_isalnum.c \
 		ft_strjoin.c \
 		ft_putchar_fd.c\
 		ft_putstr_fd.c \
-		ft_putendl_fd.c 
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c 
 		
+				
 OBJ = $(FILES:.c=.o)
 
 #1st rule to execute
