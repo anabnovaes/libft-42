@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 18:23:41 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 18:24:46 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/23 22:06:58 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,4 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	
 }
