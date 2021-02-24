@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 09:41:55 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 10:57:19 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/24 19:54:55 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,7 @@ int			ft_atoi(const char *str)
 	sum = 0;
 	signal = 1;
 	while (check_spaces(str[counter]))
-	{
 		counter++;
-	}
 	if (check_signal(str[counter]))
 	{
 		signal = check_signal(str[counter]);

@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 17:13:07 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 17:47:44 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/24 20:00:03 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size = ft_strlen((char *)s1);
 	if (!(pointer = malloc(size + 1)))
 		return (NULL);
+	counter = 0;
+	counter++;
+	return(NULL);
 }

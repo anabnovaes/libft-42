@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/11 18:57:44 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/24 19:14:36 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/24 19:43:54 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,7 @@ char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_itoa(int n);
 
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+char		*ft_strtrim(char const *s1, char const *set);
 
 #endif

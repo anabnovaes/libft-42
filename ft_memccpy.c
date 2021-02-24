@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:20:49 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 11:12:03 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/24 19:55:36 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		cnrv_dst[cnt] = cnrv_src[cnt];
 		if ((unsigned char)cnrv_src[cnt] == (unsigned char)c)
-		{
 			return (dst + cnt + 1);
-		}
 		cnt++;
 	}
 	return (NULL);
