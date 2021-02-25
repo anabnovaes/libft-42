@@ -6,7 +6,7 @@
 #    By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/15 18:10:22 by apaula-b          #+#    #+#              #
-#    Updated: 2021/02/24 20:01:00 by apaula-b         ###   ########.fr        #
+#    Updated: 2021/02/24 20:36:52 by apaula-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,8 +52,8 @@ FILES =  ft_isalnum.c \
 		ft_putendl_fd.c \
 		ft_itoa.c \
 		ft_putnbr_fd.c\
-		ft_strmapi.c
-		
+		ft_strmapi.c \
+		ft_strtrim.c
 				
 OBJ = $(FILES:.c=.o)
 
