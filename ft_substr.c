@@ -17,12 +17,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*dest;
 	unsigned int	counter;
 	char			*org;
+	size_t 			len_s;
 
 	counter = 0;
-	org = (char *)s;
+	org = ((char *)s);
 	dest = malloc(len + 1);
-	if (len == 0 || !dest || (size_t)start >= len)
+	len_s = ft_strlen((char *)s);
+	if (len == 0 || !dest)
 		return (dest);
+	if (start > len_s)
+		return (ft_strdup(""));
 	while (counter < (unsigned int)len && s[counter + start])
 	{
 		dest[counter] = org[counter + start];
