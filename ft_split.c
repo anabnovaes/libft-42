@@ -6,63 +6,66 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 19:35:53 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/27 16:08:13 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/27 19:17:49 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	frequency(const char *s, char c)
+static size_t	word_couter(const char *s, char c)
 {
-	size_t 		count;
+	size_t		delimiter;
+	size_t		words;
 
-	count = 0;
-	while(*s)
+	delimiter = 1;
+	words = 0;
+	while (*s)
 	{
-		if(*s == c)
-			count++;
+		if (*s != c && delimiter)
+		{
+			delimiter = 0;
+			words++;
+		}
+		else if (*s == c)
+		{
+			delimiter = 1;
+		}
+		s++;
 	}
-	return (count);
+	return (words);
 }
 
-static size_t	pos_c(const char *s, char c, size_t init)
+static size_t	size_word(char const *s, char c, int initial)
 {
-	size_t counter;
-
-	counter = init;
-	while(s[counter])
-	{
-		if(s[counter] == c)
-			return counter;
-	}
-	return (0);
+	while (s[initial] != '\0' && s[initial] != c)
+		initial++;
+	return (initial);
 }
 
 char			**ft_split(char const *s, char c)
 {
-	int			times_sequence;
+	int			n_words;
+	int			i;
 	int			count;
-	char	**words;
-	int			sum;
-	int			position;
-	
+	char		**p;
+
+	i = 0;
 	count = 0;
-	sum = -1;
-	times_sequence = frequency(s, c);
-	words = (char**)malloc(sizeof(char *) * times_sequence + 1);
-
-	if(times_sequence == 0 || s == NULL || !c || !words) 
+	n_words = word_couter(s, c);
+	p = (char **)malloc(sizeof(char *) * (n_words + 1));
+	p[n_words] = NULL;
+	if (p == 0 || s == NULL || !c || !p)
 		return (NULL);
-	while (count < times_sequence)
+	while (i < n_words)
 	{
-		position = pos_c(s, c, sum);
-		if(position == 0)
-			position = ft_strlen((char *)s);
-		words[count] = ft_substr((char *)s, sum + 1, sum + position - 1);
-		sum += position;
-		count++;
+		while (s[count] == c)
+		{
+			count++;
+		}
+		p[i] = ft_substr((char *)s + count, 0,
+			(size_word(s, c, count) - count));
+		i++;
+		count = size_word(s, c, count);
 	}
-	words[times_sequence] = NULL;
-	return (words);
+	return (p);
 }
-
