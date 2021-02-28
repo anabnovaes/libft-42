@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 19:35:53 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/28 11:12:53 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/28 11:19:16 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ char			**ft_split(char const *s, char c)
 
 	i = 0;
 	count = 0;
-	n_words = word_couter(s, c);
 	if (s == NULL)
 		return (NULL);
+	n_words = word_couter(s, c);
 	if (!(p = (char **)malloc(sizeof(char *) * (n_words + 1))))
 		return (NULL);
 	p[n_words] = NULL;
