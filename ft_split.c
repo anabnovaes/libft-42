@@ -6,11 +6,12 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 19:35:53 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/27 19:42:03 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/28 10:13:42 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static size_t	word_couter(const char *s, char c)
 {
@@ -37,7 +38,7 @@ static size_t	word_couter(const char *s, char c)
 
 static size_t	size_word(char const *s, char c, int initial)
 {
-	while (s[initial] != c)
+	while (s[initial] != c && s[initial] != '\0')
 		initial++;
 	return (initial);
 }
@@ -53,7 +54,7 @@ char			**ft_split(char const *s, char c)
 	count = 0;
 	n_words = word_couter(s, c);
 	p = (char **)malloc(sizeof(char *) * (n_words + 1));
-	if (p == 0 || s == NULL || !c || !p)
+	if (s == NULL || !c || !p)
 		return (NULL);
 	p[n_words] = NULL;
 	while (i < n_words)
