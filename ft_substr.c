@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 12:27:06 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/28 10:23:04 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/28 10:31:24 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	org = ((char *)s);
 	dest = malloc(len + 1);
 	len_s = ft_strlen((char *)s);
-	if (len == 0 || !dest)
+	if (!dest)
 		return (dest);
+	if (len == 0)
+		return (NULL);
 	if (start > len_s)
 		return (ft_strdup(""));
 	while (counter < (unsigned int)len && s[counter + start])
