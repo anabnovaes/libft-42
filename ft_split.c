@@ -6,12 +6,11 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 19:35:53 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/28 10:13:42 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/28 10:23:09 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	word_couter(const char *s, char c)
 {
