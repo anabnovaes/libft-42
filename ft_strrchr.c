@@ -6,26 +6,26 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:27 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/28 12:04:12 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/02/28 12:07:26 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char    *ft_strrchr(const char *str, int c)
 {
-	size_t	length;
-	char	*value;
+    char	*value;
+    int		counter;
 
-	length = ft_strlen((char *)s);
-	value = (char *)s; 
-	while (length > 0)
-	{
-		if (value[length] == (unsigned char)c)
-			return (value + length);
-		length--;
-	}
-	if (s[length] == c)
-		return ((char *)s + length);
-	return (NULL);
+    counter = ft_strlen(str);
+    value = (char *)str;
+    while (counter >= 0)
+    {
+        if (value[counter] == (unsigned char)c)
+        {
+            return (&value[counter]);
+        }
+        counter--;
+    }
+    return (NULL);
 }
