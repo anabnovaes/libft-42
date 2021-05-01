@@ -27,9 +27,7 @@ static size_t	word_couter(const char *s, char c)
 			words++;
 		}
 		else if (*s == c)
-		{
 			delimiter = 1;
-		}
 		s++;
 	}
 	return (words);
@@ -60,9 +58,7 @@ char			**ft_split(char const *s, char c)
 	while (i < n_words)
 	{
 		while (s[count] == c)
-		{
 			count++;
-		}
 		p[i] = ft_substr((char *)s + count, 0,
 			(size_word(s, c, count) - count));
 		i++;
