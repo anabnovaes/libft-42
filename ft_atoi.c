@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 09:41:55 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/24 19:54:55 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 12:42:35 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ static int	check_signal(char value)
 
 static int	check_spaces(char character)
 {
-	if (character == ' ' || character == '\v' || character == '\n' ||
-	character == '\t' || character == '\r' || character == '\f')
+	if (character == ' ' || character == '\v' || character == '\n'
+		|| character == '\t' || character == '\r' || character == '\f')
 		return (1);
 	else
 		return (0);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	size_t		counter;
 	size_t		sum;

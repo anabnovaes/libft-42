@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 17:45:57 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 18:07:59 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 13:02:20 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	size_t count;
+	size_t	count;
 
 	count = 0;
 	if (s == NULL)

@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 17:42:13 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/21 18:07:10 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 12:58:45 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t count;
+	size_t	count;
 
 	count = 0;
 	if (s == NULL)

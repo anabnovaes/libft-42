@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 19:22:13 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/18 20:47:03 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 13:02:29 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t len)
 {
-	size_t counter;
+	size_t	counter;
 
 	counter = 0;
 	if (len == 0)

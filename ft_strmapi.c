@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 18:23:41 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/28 11:03:03 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 12:49:27 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	counter = 0;
 	if (s == NULL)
 		return (NULL);
-	if (!(string = malloc((ft_strlen((char *)s) + 1) * sizeof(char))))
+	string = malloc((ft_strlen((char *)s) + 1) * sizeof(char));
+	if (!string)
 		return (NULL);
 	while (s[counter] != '\0')
 	{
