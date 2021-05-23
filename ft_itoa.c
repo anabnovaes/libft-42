@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 20:03:26 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/05/01 13:25:34 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/05/23 11:05:52 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 static int	check_size(long int value)
 {
 	int			size;
-	long int	compare_value;
 	long int	check_value;
 
 	size = 1;
 	if (value < 0)
 		value *= -1;
-	compare_value = value;
 	check_value = value /10;
 	while (check_value >= 1)
 		size++;
@@ -75,7 +73,7 @@ char	*ft_itoa(int n)
 	value = ft_calloc(sizeof(char), size + 1 + spaces);
 	if (!value)
 		return (NULL);
-	if (value > 0)
+	if (n > 0)
 		value = convert_positive(n, size, value);
 	else
 		value = convert_negative(n, size, value);

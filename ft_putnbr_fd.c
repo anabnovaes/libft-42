@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 17:52:09 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/05/01 13:04:58 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/05/23 11:04:51 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ static void	cnvr_vlue(long int value, int size, int fd)
 
 	i = 0;
 	counter = 1;
+	string_print = NULL;
 	while (counter <= size)
 	{
 		last_value = value % 10;
