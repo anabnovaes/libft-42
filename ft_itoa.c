@@ -41,7 +41,6 @@ static char	*cnvr_vlue(long int value, int size, char *string)
 		string[size - counter] = last_value + '0';
 		counter++;
 	}
-	printf("string %s \n", string);
 	return (string);
 }
 
@@ -54,7 +53,6 @@ char	*ft_itoa(int n)
 
 	spaces = 0;
 	size = check_size(n);
-	printf("size %d \n", size);
 	if (n < 0)
 		spaces = 1;
 	value = ft_calloc(sizeof(char), size + 1 + spaces);
@@ -70,8 +68,3 @@ char	*ft_itoa(int n)
 	return (value);
 }
 
-int	main(void)
-{
-	ft_itoa(-234);
-	return (0);
-}
