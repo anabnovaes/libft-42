@@ -36,6 +36,7 @@ static void	cnvr_vlue(long int value, int size, int fd)
 
 	i = 0;
 	counter = 1;
+	string_print = NULL;
 	while (counter <= size)
 	{
 		last_value = value % 10;
