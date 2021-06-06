@@ -31,7 +31,7 @@ static int	check_size(long int value)
 	return (size);
 }
 
-static char	*cnvr_vlue(long int value, int size, char *string)
+static char	*convert_positive(long int value, int size, char *string)
 {
 	int			last_value;
 	int			counter;
@@ -42,9 +42,27 @@ static char	*cnvr_vlue(long int value, int size, char *string)
 		last_value = value % 10;
 		value /= 10;
 		string[size - counter] = last_value + '0';
-		counter++;
+		counter++ ;
 	}
-	string[size] = '\0';
+	string[size + 1] = '\0';
+	return (string);
+}
+
+static char	*convert_negative(int value, int size, char *string)
+{
+	int			last_value;
+	int			counter;
+
+	string[0] = '-';
+	counter = size + 1;
+	while (counter > 0)
+	{
+		last_value = value % 10;
+		value /= 10;
+		printf("last value %c \n", last_value);
+		string[counter] = (last_value * -1) + '0';
+		counter--;
+	}
 	return (string);
 }
 
@@ -53,7 +71,6 @@ char	*ft_itoa(int n)
 	char		*value;
 	int			size;
 	int			spaces;
-	char		*temp;
 
 	spaces = 0;
 	size = check_size(n);
@@ -64,11 +81,9 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (n < 0)
 	{
-		n *= -1;
-		temp = cnvr_vlue(n, size, value);
-		value = ft_strjoin("-", temp);
+		value = convert_negative(n, size, value);
 	}
 	else
-		value = cnvr_vlue(n, size + 1, value);
+		value = convert_positive(n, size, value);
 	return (value);
 }
