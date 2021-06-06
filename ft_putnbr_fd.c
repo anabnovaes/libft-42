@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 17:52:09 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/06/06 01:03:18 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/06/06 01:04:34 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ static char	*convert_positive(long int value, int size, int fd)
 	int			i;
 
 	counter = 1;
+	string = NULL;
 	while (counter <= size)
 	{
 		last_value = value % 10;
@@ -59,6 +60,7 @@ static char	*convert_negative(int value, int size, int fd)
 	char		*string;
 	int			i;
 
+	string = NULL;
 	string[0] = '-';
 	counter = size;
 	while (counter > 0)
