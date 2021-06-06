@@ -50,7 +50,6 @@ static char	*cnvr_vlue(long int value, int size, char *string)
 		counter++;
 	}
 	string[counter] = '\0';
-	printf("value %s", string);
 	return (string);
 }
 
