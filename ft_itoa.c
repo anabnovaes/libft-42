@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 20:03:26 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/05/23 11:05:52 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/06/06 00:19:37 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,20 @@
 static int	check_size(long int value)
 {
 	int			size;
+	long int	compare_value;
 	long int	check_value;
 
-	size = 0;
+	size = 1;
 	if (value < 0)
 		value *= -1;
-	if (value < 10)
-		return (1);
-	check_value = value / 10 ;
+	compare_value = value;
+	check_value = value /10;
 	while (check_value >= 1)
-	{
-		check_value /= 10 ;
 		size++;
-	}
 	return (size);
 }
 
-static char	*convert_positive(long int value, int size, char *string)
+static char	*convert_positive(int value, int size, char *string)
 {
 	int			last_value;
 	int			counter;
@@ -42,9 +39,8 @@ static char	*convert_positive(long int value, int size, char *string)
 		last_value = value % 10;
 		value /= 10;
 		string[size - counter] = last_value + '0';
-		counter++ ;
+		counter++;
 	}
-	string[size + 1] = '\0';
 	return (string);
 }
 
@@ -54,12 +50,13 @@ static char	*convert_negative(int value, int size, char *string)
 	int			counter;
 
 	string[0] = '-';
+	value *= -1;
 	counter = size + 1;
 	while (counter > 0)
 	{
 		last_value = value % 10;
 		value /= 10;
-		string[counter] = (last_value * -1) + '0';
+		string[counter] = last_value + '0';
 		counter--;
 	}
 	return (string);
@@ -67,22 +64,20 @@ static char	*convert_negative(int value, int size, char *string)
 
 char	*ft_itoa(int n)
 {
-	char		*value;
-	int			size;
-	int			spaces;
+	char	*value;
+	int		size;
+	int		spaces;
 
 	spaces = 0;
-	size = check_size(n);
 	if (n < 0)
 		spaces = 1;
+	size = check_size(n);
 	value = ft_calloc(sizeof(char), size + 1 + spaces);
 	if (!value)
 		return (NULL);
-	if (n < 0)
-	{
-		value = convert_negative(n, size, value);
-	}
+	if (n > 0)
+		value = convert_positive(n, size + 1, value);
 	else
-		value = convert_positive(n, size, value);
+		value = convert_negative(n, size, value);
 	return (value);
 }
