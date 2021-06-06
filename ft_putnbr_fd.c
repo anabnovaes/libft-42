@@ -15,41 +15,34 @@
 static int	check_size(long int value)
 {
 	int			size;
-	long int	compare_value;
+	long int	check_value;
 
-	size = 1;
-	compare_value = value;
-	while ((compare_value / 10) > 0)
+	size = 0;
+	if (value < 0)
+		value *= -1;
+	check_value = value / 10 ;
+	while (check_value >= 1)
 	{
-		compare_value /= 10;
+		check_value /= 10 ;
 		size++;
 	}
 	return (size);
 }
 
-static void	cnvr_vlue(long int value, int size, int fd)
+static char	*cnvr_vlue(long int value, int size, char *string)
 {
 	int			last_value;
-	char		*string_print;
 	int			counter;
-	int			i;
 
-	i = 0;
-	counter = 1;
-	string_print = NULL;
+	counter = 0;
 	while (counter <= size)
 	{
 		last_value = value % 10;
 		value /= 10;
-		string_print[size - counter] = last_value + '0';
+		string[size - counter] = last_value + '0';
 		counter++;
 	}
-	string_print[size] = '\0';
-	while (string_print[i] != '\0')
-	{
-		write(fd, &string_print[i], 1);
-		i++;
-	}
+	return (string);
 }
 
 void	ft_putnbr_fd(int n, int fd)

@@ -19,12 +19,15 @@ static int	check_size(long int value)
 	int			size;
 	long int	check_value;
 
-	size = 1;
+	size = 0;
 	if (value < 0)
 		value *= -1;
 	check_value = value / 10 ;
-	while (check_value >= 1 )
+	while (check_value >= 1)
+	{
+		check_value /= 10 ;
 		size++;
+	}
 	return (size);
 }
 
@@ -53,6 +56,7 @@ char	*ft_itoa(int n)
 
 	spaces = 0;
 	size = check_size(n);
+	printf("size %d \n", size);
 	if (n < 0)
 		spaces = 1;
 	value = ft_calloc(sizeof(char), size + 1 + spaces);
@@ -67,4 +71,3 @@ char	*ft_itoa(int n)
 		value = cnvr_vlue(n, size, value);
 	return (value);
 }
-
