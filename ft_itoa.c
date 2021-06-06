@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 static int	check_size(long int value)
 {
@@ -56,7 +54,6 @@ char	*ft_itoa(int n)
 
 	spaces = 0;
 	size = check_size(n);
-	printf("size %d \n", size);
 	if (n < 0)
 		spaces = 1;
 	value = ft_calloc(sizeof(char), size + 1 + spaces);
