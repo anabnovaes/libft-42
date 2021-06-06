@@ -20,7 +20,7 @@ static int	check_size(long int value)
 	size = 1;
 	if (value < 0)
 		value *= -1;
-	check_value = value /10;
+	check_value = value / 10 ;
 	while (check_value >= 1)
 		size++;
 	return (size);
@@ -65,6 +65,7 @@ char	*ft_itoa(int n)
 	char	*value;
 	int		size;
 	int		spaces;
+	char	*converted_value;
 
 	spaces = 0;
 	if (n < 0)
@@ -74,8 +75,9 @@ char	*ft_itoa(int n)
 	if (!value)
 		return (NULL);
 	if (n > 0)
-		value = convert_positive(n, size, value);
+		converted_value = convert_positive(n, size, value);
 	else
-		value = convert_negative(n, size, value);
+		converted_value = convert_negative(n, size, value);
+	ft_strlcpy(converted_value, value, size + 1);
 	return (value);
 }
