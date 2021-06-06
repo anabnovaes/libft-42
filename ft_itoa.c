@@ -21,12 +21,12 @@ static int	check_size(long int value)
 	if (value < 0)
 		value *= -1;
 	check_value = value / 10 ;
-	while (check_value >= 1)
+	while (check_value >= 1 )
 		size++;
 	return (size);
 }
 
-static char	*convert_positive(int value, int size, char *string)
+static char	*cnvr_vlue(long int value, int size, char *string)
 {
 	int			last_value;
 	int			counter;
@@ -37,47 +37,31 @@ static char	*convert_positive(int value, int size, char *string)
 		last_value = value % 10;
 		value /= 10;
 		string[size - counter] = last_value + '0';
-		counter++;
-	}
-	return (string);
-}
-
-static char	*convert_negative(int value, int size, char *string)
-{
-	int			last_value;
-	int			counter;
-
-	string[0] = '-';
-	value *= -1;
-	counter = size + 1;
-	while (counter > 0)
-	{
-		last_value = value % 10;
-		value /= 10;
-		string[counter] = last_value + '0';
-		counter--;
+		counter ++;
 	}
 	return (string);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*value;
-	int		size;
-	int		spaces;
-	char	*converted_value;
+	char		*value;
+	int			size;
+	int			spaces;
+	char		*temp;
 
 	spaces = 0;
+	size = check_size(n);
 	if (n < 0)
 		spaces = 1;
-	size = check_size(n);
 	value = ft_calloc(sizeof(char), size + 1 + spaces);
 	if (!value)
 		return (NULL);
 	if (n > 0)
-		converted_value = convert_positive(n, size, value);
+	{
+		temp = cnvr_vlue(n * -1, size + spaces, value);
+		value = ft_strjoin("-", temp);
+	}
 	else
-		converted_value = convert_negative(n, size, value);
-	ft_strlcpy(converted_value, value, size + 1);
+		value = cnvr_vlue(n, size + spaces, value);
 	return (value);
 }
