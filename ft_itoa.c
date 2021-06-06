@@ -59,7 +59,6 @@ static char	*convert_negative(int value, int size, char *string)
 	{
 		last_value = value % 10;
 		value /= 10;
-		printf("last value %c \n", last_value);
 		string[counter] = (last_value * -1) + '0';
 		counter--;
 	}
