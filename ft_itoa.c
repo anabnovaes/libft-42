@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 static int	check_size(long int value)
 {
@@ -37,8 +39,9 @@ static char	*cnvr_vlue(long int value, int size, char *string)
 		last_value = value % 10;
 		value /= 10;
 		string[size - counter] = last_value + '0';
-		counter ++;
+		counter++;
 	}
+	printf("string %s \n", string);
 	return (string);
 }
 
@@ -51,17 +54,24 @@ char	*ft_itoa(int n)
 
 	spaces = 0;
 	size = check_size(n);
+	printf("size %d \n", size);
 	if (n < 0)
 		spaces = 1;
 	value = ft_calloc(sizeof(char), size + 1 + spaces);
 	if (!value)
 		return (NULL);
-	if (n > 0)
+	if (n < 0)
 	{
-		temp = cnvr_vlue(n * -1, size + spaces, value);
+		temp = cnvr_vlue(n * -1, size, value);
 		value = ft_strjoin("-", temp);
 	}
 	else
-		value = cnvr_vlue(n, size + spaces, value);
+		value = cnvr_vlue(n, size, value);
 	return (value);
+}
+
+int	main(void)
+{
+	ft_itoa(-234);
+	return (0);
 }
