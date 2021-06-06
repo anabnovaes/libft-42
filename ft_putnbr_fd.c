@@ -29,20 +29,29 @@ static int	check_size(long int value)
 	return (size);
 }
 
-static char	*cnvr_vlue(long int value, int size, char *string)
+static void	cnvr_vlue(long int value, int size, int fd)
 {
 	int			last_value;
+	char		*string_print;
 	int			counter;
+	int			i;
 
-	counter = 0;
+	i = 0;
+	counter = 1;
+	string_print = NULL;
 	while (counter <= size)
 	{
 		last_value = value % 10;
 		value /= 10;
-		string[size - counter] = last_value + '0';
+		string_print[size - counter] = last_value + '0';
 		counter++;
 	}
-	return (string);
+	string_print[size] = '\0';
+	while (string_print[i] != '\0')
+	{
+		write(fd, &string_print[i], 1);
+		i++;
+	}
 }
 
 void	ft_putnbr_fd(int n, int fd)
