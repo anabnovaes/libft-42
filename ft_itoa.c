@@ -11,23 +11,23 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	check_size(long int value)
 {
 	int			size;
 	long int	check_value;
 
-	size = 1;
+	size = 0;
 	if (value < 0)
 		value *= -1;
+	if (value < 10)
+		return (1);
 	check_value = value / 10 ;
 	while (check_value >= 1)
 	{
 		check_value /= 10 ;
 		size++;
 	}
-	printf("size %d\n", size);
 	return (size);
 }
 
@@ -78,11 +78,3 @@ char	*ft_itoa(int n)
 	return (value);
 }
 
-int	main(void)
-{
-	char	*itoa;
-
-	itoa = ft_itoa(1);
-	printf ("\n\nfinal :%s", itoa);
-	return (0);
-}
