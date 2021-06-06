@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 17:52:09 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/02/27 16:14:10 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/06/06 01:03:18 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,42 +27,64 @@ static int	check_size(long int value)
 	return (size);
 }
 
-static void	cnvr_vlue(long int value, int size, int fd)
+
+static char	*convert_positive(long int value, int size, int fd)
 {
 	int			last_value;
-	char		*string_print;
 	int			counter;
+	char		*string;
 	int			i;
 
-	i = 0;
 	counter = 1;
-	string_print = NULL;
 	while (counter <= size)
 	{
 		last_value = value % 10;
 		value /= 10;
-		string_print[size - counter] = last_value + '0';
+		string[size - counter] = last_value + '0';
 		counter++;
 	}
-	string_print[size] = '\0';
-	while (string_print[i] != '\0')
+	string[size] = '\0';
+	i = 0;
+	while (string[i] != '\0')
 	{
-		write(fd, &string_print[i], 1);
+		write(fd, &string[i], 1);
+		i++;
+	}
+}
+
+static char	*convert_negative(int value, int size, int fd)
+{
+	int			last_value;
+	int			counter;
+	char		*string;
+	int			i;
+
+	string[0] = '-';
+	counter = size;
+	while (counter > 0)
+	{
+		last_value = value % 10;
+		value /= 10;
+		string[counter] = (last_value * -1) + '0';
+		counter--;
+	}
+	if (!value)
+		string = "0";
+	i = 0;
+	while (string[i] != '\0')
+	{
+		write(fd, &string[i], 1);
 		i++;
 	}
 }
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long int	print_value;
 	int			size;
 
-	print_value = n;
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		print_value *= -1;
-	}
-	size = check_size(print_value);
-	cnvr_vlue(print_value, size, fd);
+	size = check_size(n);
+	if (n <= 0)
+		convert_negative(n, size, fd);
+	else
+		convert_positive(n, size, fd);
 }
