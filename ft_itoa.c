@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/23 20:03:26 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/06/06 00:31:38 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/06/06 00:52:34 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@ static char	*convert_positive(long int value, int size, char *string)
 	int			last_value;
 	int			counter;
 
-	counter = 0;
+	counter = 1;
 	while (counter <= size)
 	{
 		last_value = value % 10;
 		value /= 10;
 		string[size - counter] = last_value + '0';
-		counter++ ;
+		counter++;
 	}
-	string[size + 1] = '\0';
+	string[size] = '\0';
 	return (string);
 }
 
@@ -51,7 +51,13 @@ static char	*convert_negative(int value, int size, char *string)
 	int			last_value;
 	int			counter;
 
-	string[0] = '-';
+	if (!value)
+	{
+		string = "0";
+		return (string);
+	}
+	else
+		string[0] = '-';
 	counter = size;
 	while (counter > 0)
 	{
@@ -76,7 +82,7 @@ char	*ft_itoa(int n)
 	value = ft_calloc(sizeof(char), size + 1 + spaces);
 	if (!value)
 		return (NULL);
-	if (n < 0)
+	if (n <= 0)
 	{
 		value = convert_negative(n, size, value);
 	}
