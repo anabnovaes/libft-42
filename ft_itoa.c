@@ -41,7 +41,7 @@ static char	*cnvr_vlue(long int value, int size, char *string)
 	{
 		last_value = value % 10;
 		value /= 10;
-		string[size - 1 - counter] = last_value + '0';
+		string[size - counter] = last_value + '0';
 		counter++;
 	}
 	string[size] = '\0';
@@ -64,7 +64,8 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (n < 0)
 	{
-		temp = cnvr_vlue(n * -1, size + 1, value);
+		n *= -1;
+		temp = cnvr_vlue(n, size, value);
 		value = ft_strjoin("-", temp);
 	}
 	else
