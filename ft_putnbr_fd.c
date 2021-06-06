@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/21 17:52:09 by apaula-b          #+#    #+#             */
+/*   Updated: 2021/02/27 16:14:10 by apaula-b         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 static int	check_size(long int value)
 {
 	int			size;
@@ -16,7 +30,7 @@ static int	check_size(long int value)
 static void	cnvr_vlue(long int value, int size, int fd)
 {
 	int			last_value;
-	char		string_print[size + 1];
+	char		*string_print;
 	int			counter;
 	int			i;
 
