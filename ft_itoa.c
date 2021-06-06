@@ -40,6 +40,7 @@ static char	*cnvr_vlue(long int value, int size, char *string)
 	if (size == 1)
 	{
 		string[0] = value + '0';
+		string[1] = '\0';
 		return (string);
 	}
 	while (counter < size)
