@@ -37,20 +37,14 @@ static char	*cnvr_vlue(long int value, int size, char *string)
 	int			counter;
 
 	counter = 0;
-	if (size == 1)
-	{
-		string[0] = value + '0';
-		string[1] = '\0';
-		return (string);
-	}
-	while (counter < size)
+	while (counter <= size)
 	{
 		last_value = value % 10;
 		value /= 10;
-		string[size - counter] = last_value + '0';
+		string[size - 1 - counter] = last_value + '0';
 		counter++;
 	}
-	string[counter] = '\0';
+	string[size] = '\0';
 	return (string);
 }
 
@@ -70,11 +64,10 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (n < 0)
 	{
-		temp = cnvr_vlue(n * -1, size, value);
+		temp = cnvr_vlue(n * -1, size + 1, value);
 		value = ft_strjoin("-", temp);
 	}
 	else
 		value = cnvr_vlue(n, size, value);
 	return (value);
 }
-
