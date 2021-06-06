@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	check_size(long int value)
 {
@@ -26,6 +27,7 @@ static int	check_size(long int value)
 		check_value /= 10 ;
 		size++;
 	}
+	printf("size %d\n", size);
 	return (size);
 }
 
@@ -35,7 +37,12 @@ static char	*cnvr_vlue(long int value, int size, char *string)
 	int			counter;
 
 	counter = 0;
-	while (counter <= size)
+	if (size == 1)
+	{
+		string[0] = value + '0';
+		return (string);
+	}
+	while (counter < size)
 	{
 		last_value = value % 10;
 		value /= 10;
@@ -43,6 +50,7 @@ static char	*cnvr_vlue(long int value, int size, char *string)
 		counter++;
 	}
 	string[counter] = '\0';
+	printf("value %s", string);
 	return (string);
 }
 
@@ -68,4 +76,13 @@ char	*ft_itoa(int n)
 	else
 		value = cnvr_vlue(n, size, value);
 	return (value);
+}
+
+int	main(void)
+{
+	char	*itoa;
+
+	itoa = ft_itoa(1);
+	printf ("\n\nfinal :%s", itoa);
+	return (0);
 }
