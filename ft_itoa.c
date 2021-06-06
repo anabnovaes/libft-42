@@ -17,7 +17,7 @@ static int	check_size(long int value)
 	int			size;
 	long int	check_value;
 
-	size = 0;
+	size = 1;
 	if (value < 0)
 		value *= -1;
 	check_value = value / 10 ;
@@ -42,6 +42,7 @@ static char	*cnvr_vlue(long int value, int size, char *string)
 		string[size - counter] = last_value + '0';
 		counter++;
 	}
+	string[counter] = '\0';
 	return (string);
 }
 
