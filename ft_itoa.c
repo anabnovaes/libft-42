@@ -69,6 +69,6 @@ char	*ft_itoa(int n)
 		value = ft_strjoin("-", temp);
 	}
 	else
-		value = cnvr_vlue(n, size, value);
+		value = cnvr_vlue(n, size + 1, value);
 	return (value);
 }
