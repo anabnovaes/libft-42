@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 17:52:09 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/06/06 11:26:23 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/06/06 11:28:27 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ static int	check_size(long int value)
 
 	size = 1;
 	compare_value = value;
-	while ((compare_value / 10) > 0)
+	compare_value /= 10;
+	while (compare_value > 0)
 	{
 		compare_value /= 10;
 		size++;
