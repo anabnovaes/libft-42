@@ -6,7 +6,7 @@
 /*   By: apaula-b <apaula-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 17:52:09 by apaula-b          #+#    #+#             */
-/*   Updated: 2021/06/06 01:04:34 by apaula-b         ###   ########.fr       */
+/*   Updated: 2021/06/06 01:06:01 by apaula-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ static int	check_size(long int value)
 	return (size);
 }
 
-
-static char	*convert_positive(long int value, int size, int fd)
+void	convert_positive(long int value, int size, int fd)
 {
 	int			last_value;
 	int			counter;
@@ -53,7 +52,7 @@ static char	*convert_positive(long int value, int size, int fd)
 	}
 }
 
-static char	*convert_negative(int value, int size, int fd)
+void	convert_negative(int value, int size, int fd)
 {
 	int			last_value;
 	int			counter;
